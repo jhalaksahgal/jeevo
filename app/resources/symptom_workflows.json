@@ -1,0 +1,117 @@
+{
+    "fever": {
+        "name": "Fever Assessment",
+        "questions": [
+            "For how many days have you had fever?",
+            "What is your temperature (if measured)?",
+            "Do you have other symptoms like cough, body pain, or headache?",
+            "Any recent travel or exposure to sick people?"
+        ],
+        "high_risk_indicators": [
+            "temperature > 103",
+            "difficulty breathing",
+            "chest pain"
+        ],
+        "red_flags": [
+            "unconsciousness",
+            "severe headache with stiff neck",
+            "difficulty breathing"
+        ],
+        "advice_if_severe": "This sounds serious. Please seek emergency care immediately (call 108) or visit the nearest hospital."
+    },
+    "cough": {
+        "name": "Cough Assessment",
+        "questions": [
+            "How long have you had the cough?",
+            "Is it dry or with phlegm?",
+            "Any fever, shortness of breath, or chest pain?",
+            "Do you have asthma or respiratory conditions?"
+        ],
+        "high_risk_indicators": [
+            "severe cough",
+            "blood in phlegm",
+            "difficulty breathing"
+        ],
+        "red_flags": [
+            "hemoptysis",
+            "severe shortness of breath"
+        ],
+        "advice_if_severe": "This needs medical attention. Visit a doctor or hospital soon."
+    },
+    "headache": {
+        "name": "Headache Assessment",
+        "questions": [
+            "How severe is your headache (1-10)?",
+            "Is it throbbing, pressure, or sharp?",
+            "Do you have fever, neck stiffness, or sensitivity to light?",
+            "What triggered the headache?"
+        ],
+        "high_risk_indicators": [
+            "sudden severe headache",
+            "fever + stiff neck",
+            "vision changes"
+        ],
+        "red_flags": [
+            "meningitis signs",
+            "thunderclap headache"
+        ],
+        "advice_if_severe": "Consult a doctor. If accompanied by fever and neck stiffness, seek emergency care."
+    },
+    "bodyache": {
+        "name": "Body Pain Assessment",
+        "questions": [
+            "Which parts of your body hurt?",
+            "Is it constant or intermittent?",
+            "Do you have fever or other symptoms?",
+            "Did you recently exercise or have an injury?"
+        ],
+        "high_risk_indicators": [
+            "severe pain",
+            "inability to move",
+            "numbness"
+        ],
+        "red_flags": [
+            "chest pain",
+            "severe crushing pain"
+        ],
+        "advice_if_severe": "Seek medical attention if pain is severe or accompanied by other concerning symptoms."
+    },
+    "diarrhea": {
+        "name": "Diarrhea Assessment",
+        "questions": [
+            "How many times per day?",
+            "Is there blood or mucus?",
+            "Do you have fever, vomiting, or abdominal pain?",
+            "What did you eat in the last 24 hours?"
+        ],
+        "high_risk_indicators": [
+            "bloody diarrhea",
+            "severe dehydration",
+            "high fever"
+        ],
+        "red_flags": [
+            "cholera symptoms",
+            "severe electrolyte loss"
+        ],
+        "advice_if_severe": "Stay hydrated with ORS. If severe or bloody, visit a doctor."
+    },
+    "vomiting": {
+        "name": "Vomiting Assessment",
+        "questions": [
+            "How many times have you vomited?",
+            "Is there blood in vomit?",
+            "Do you have abdominal pain or fever?",
+            "When did the vomiting start?"
+        ],
+        "high_risk_indicators": [
+            "projectile vomiting",
+            "blood in vomit",
+            "severe dehydration"
+        ],
+        "red_flags": [
+            "hematemesis",
+            "signs of obstruction"
+        ],
+        "advice_if_severe": "Drink small amounts of oral rehydration solution. See a doctor if persistent."
+    }
+}

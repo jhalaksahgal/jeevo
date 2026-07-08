@@ -1,0 +1,37 @@
+{
+    "paracetamol": {
+        "names": ["Crocin", "Dolo", "Calpol"],
+        "uses": "Fever, headache, body pain",
+        "dosage": "Adults: 500-1000mg every 4-6 hours (max 4g/day). Children: 10-15mg/kg",
+        "side_effects": "Rare: liver issues with overdose",
+        "warnings": "Do not exceed recommended dose. Avoid alcohol."
+    },
+    "ibuprofen": {
+        "names": ["Brufen", "Combiflam"],
+        "uses": "Pain, inflammation, fever",
+        "dosage": "Adults: 200-400mg every 4-6 hours",
+        "side_effects": "Stomach upset, ulcers with prolonged use",
+        "warnings": "Take with food. Not for children under 12."
+    },
+    "ors": {
+        "names": ["Electral", "ORS"],
+        "uses": "Dehydration, diarrhea, vomiting",
+        "dosage": "Dissolve 1 packet in 1 liter clean water. Sip frequently.",
+        "side_effects": "None when used correctly",
+        "warnings": "Use clean water only. Discard after 24 hours."
+    },
+    "azithromycin": {
+        "names": ["Azee", "Zithromax"],
+        "uses": "Bacterial infections (respiratory, skin, ear)",
+        "dosage": "As prescribed by doctor - usually 500mg once daily for 3 days",
+        "side_effects": "Nausea, diarrhea, stomach pain",
+        "warnings": "Complete full course. Prescription required."
+    },
+    "cetirizine": {
+        "names": ["Zyrtec", "Alerid"],
+        "uses": "Allergies, cold symptoms, itching",
+        "dosage": "Adults: 10mg once daily",
+        "side_effects": "Drowsiness",
+        "warnings": "Avoid driving if drowsy"
+    }
+}

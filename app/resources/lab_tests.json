@@ -1,0 +1,15 @@
+{
+    "cbc": {
+        "full_name": "Complete Blood Count",
+        "purpose": "Overall health check, detect infections, anemia",
+        "preparation": "Usually no fasting required",
+        "cost_range": "\u20b9200-500"
+    },
+    "blood sugar": {
+        "full_name": "Blood Glucose Test",
+        "purpose": "Screen/monitor diabetes",
+        "preparation": "Fasting: No food for 8-12 hours",
+        "normal": "Fasting: 70-100 mg/dL",
+        "cost_range": "\u20b950-200"
+    }
+}

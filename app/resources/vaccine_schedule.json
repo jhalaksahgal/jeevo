@@ -1,0 +1,45 @@
+{
+    "0": [
+        "BCG",
+        "Hepatitis B",
+        "OPV 0"
+    ],
+    "42": [
+        "DPT 1",
+        "Hepatitis B 1",
+        "OPV 1",
+        "Hib 1",
+        "Rotavirus 1",
+        "PCV 1"
+    ],
+    "70": [
+        "DPT 2",
+        "Hepatitis B 2",
+        "OPV 2",
+        "Hib 2",
+        "Rotavirus 2",
+        "PCV 2"
+    ],
+    "98": [
+        "DPT 3",
+        "Hepatitis B 3",
+        "OPV 3",
+        "Hib 3",
+        "Rotavirus 3",
+        "PCV 3"
+    ],
+    "270": [
+        "Measles 1 (MR)"
+    ],
+    "365": [
+        "PCV Booster"
+    ],
+    "456": [
+        "Measles 2 (MR)",
+        "DPT Booster 1",
+        "OPV Booster"
+    ],
+    "1825": [
+        "DPT Booster 2"
+    ]
+}

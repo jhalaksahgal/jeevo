@@ -1,0 +1,44 @@
+{
+    "anganwadi": {
+        "bhopal": [
+            {
+                "name": "Anganwadi Center 1",
+                "area": "Koh-e-Fiza",
+                "contact": "Asha Worker: 9876543210"
+            },
+            {
+                "name": "Anganwadi Center 2",
+                "area": "MP Nagar",
+                "contact": "Asha Worker: 9876543211"
+            }
+        ],
+        "default": [
+            {
+                "name": "Local Anganwadi Center",
+                "area": "Your Area",
+                "contact": "Contact local ASHA worker"
+            }
+        ]
+    },
+    "vaccination": {
+        "bhopal": [
+            {
+                "name": "JP Hospital",
+                "type": "Government Hospital",
+                "timing": "9 AM - 2 PM"
+            },
+            {
+                "name": "AIIMS Bhopal",
+                "type": "Government Hospital",
+                "timing": "9 AM - 4 PM"
+            }
+        ],
+        "default": [
+            {
+                "name": "Nearest Primary Health Center",
+                "type": "PHC",
+                "timing": "9 AM - 1 PM"
+            }
+        ]
+    }
+}

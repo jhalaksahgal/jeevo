@@ -1,0 +1,48 @@
+{
+    "disease_by_region": {
+        "delhi": [
+            "dengue",
+            "asthma",
+            "typhoid"
+        ],
+        "mumbai": [
+            "malaria",
+            "dengue",
+            "leptospirosis"
+        ],
+        "bhopal": [
+            "malaria",
+            "typhoid",
+            "water-borne diseases"
+        ],
+        "chennai": [
+            "dengue",
+            "chikungunya"
+        ],
+        "kolkata": [
+            "dengue",
+            "cholera",
+            "malaria"
+        ]
+    },
+    "allergy_by_season": {
+        "spring": [
+            "pollen",
+            "dust"
+        ],
+        "summer": [
+            "dust",
+            "sun-rash"
+        ],
+        "monsoon": [
+            "mold",
+            "fungal",
+            "mosquito"
+        ],
+        "winter": [
+            "smog",
+            "dust",
+            "cold-induced asthma"
+        ]
+    }
+}

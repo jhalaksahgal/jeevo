@@ -1,0 +1,27 @@
+{
+    "dengue": {
+        "severity": "high",
+        "cases": 1250,
+        "trend": "increasing"
+    },
+    "malaria": {
+        "severity": "moderate",
+        "cases": 450,
+        "trend": "stable"
+    },
+    "typhoid": {
+        "severity": "moderate",
+        "cases": 800,
+        "trend": "increasing"
+    },
+    "chikungunya": {
+        "severity": "low",
+        "cases": 120,
+        "trend": "decreasing"
+    },
+    "cholera": {
+        "severity": "low",
+        "cases": 45,
+        "trend": "stable"
+    }
+}

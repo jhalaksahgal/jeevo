@@ -1,0 +1,19 @@
+{
+    "diabetes": {
+        "condition": "Diabetes",
+        "eat": ["Whole grains", "Green vegetables", "Bitter gourd", "Fenugreek"],
+        "avoid": ["White rice/bread", "Sweets", "Sugary drinks", "Potato"],
+        "tips": ["Eat at regular times", "Small frequent meals", "Check sugar regularly"]
+    },
+    "high_blood_pressure": {
+        "condition": "High Blood Pressure",
+        "eat": ["Fruits", "Vegetables", "Low-fat dairy", "Whole grains"],
+        "avoid": ["Salt/namak", "Pickles", "Papad", "Processed food"],
+        "tips": ["Limit salt to 1 teaspoon/day", "Exercise regularly"]
+    },
+    "general": {
+        "balanced_plate": "Half vegetables, quarter protein, quarter grains",
+        "daily_essentials": ["Green leafy vegetables", "Seasonal fruits", "Dal/legumes", "Whole grains (roti, brown rice)", "Milk/curd"],
+        "hydration": "8-10 glasses of water daily"
+    }
+}

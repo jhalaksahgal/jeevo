@@ -1,0 +1,63 @@
+{
+  "onboarding": {
+    "welcome": "🌟 *Namaste! Welcome to Jeevo*\nआपका स्वागत है! मैं आपका स्वास्थ्य साथी हूं\n\nSelect Language / भाषा चुनें:\n\n1️⃣ हिंदी (Hindi)\n2️⃣ English\n3️⃣ मराठी (Marathi)\n4️⃣ ગુજરાતી (Gujarati)\n5️⃣ বাংলা (Bengali)\n6️⃣ தமிழ் (Tamil)\n7️⃣ తెలుగు (Telugu)\n8️⃣ ಕನ್ನಡ (Kannada)\n9️⃣ മലയാളം (Malayalam)\n🔟 ਪੰਜਾਬੀ (Punjabi)\n\n💡 Reply with number (1-10)",
+    "name_request": "👤 *Please tell me your name*\n\nExample: Rahul Kumar",
+    "location_request": "📍 *Your Location*\n\nProvide accurate location (to find nearby hospitals):\n\n📝 Send in format:\n`Area/Village, City, State, Pincode`\n\nExample:\n`Koh-e-Fiza, Bhopal, Madhya Pradesh, 462001`\n\nOr share live location via WhatsApp (📎 → Location)",
+    "service_selection": "Thank you {name}! 🙏\n\nHow can I help you?\n\n1️⃣ 💊 *Health Problem* - Tell me symptoms (text/voice)\n2️⃣ 👨‍👩‍👧 *Family Care* - Add family members to track\n3️⃣ 💉 *Vaccination* - Child vaccine reminders\n4️⃣ 🏥 *Nearby Hospital* - Find nearest hospitals\n5️⃣ 🌡️ *Environment Alerts* - Weather, AQI, local outbreaks\n6️⃣ 💊 *Medicine Info* - Dosage, side effects\n7️⃣ ⚙️ *Update Profile* - Change location, name, language\n\nQuick tips:\n• Send a voice note to describe symptoms (we'll transcribe it).\n• Send a photo of a wound or rash for analysis.\n• Share live location (📎 → Location) for nearby services.\n\n💡 Reply with number (1-7) or type MENU/HELP anytime",
+    "profile_update": "⚙️ *Update Profile*\n\nWhat would you like to update?\n\n1️⃣ 📍 *Update Location* - Change city, state (if moving)\n2️⃣ 👤 *Change Name* - Update your name\n3️⃣ 🌐 *Change Language* - Select communication language\n\n💡 Reply with number (1-3)",
+    "quick_help": "🆘 Jeevo Quick Help\n\n• Type *MENU* to see available services\n• Send a voice note — I'll transcribe and help\n• Send a photo — I'll analyze images like rashes or wounds\n• Share live location (📎 → Location) to find nearby services\n\nWhen ready, type *MENU* or just describe your problem.",
+    "family_setup": "",
+    "vaccination_setup": "💉 *Vaccination Tracking*\n\nProvide child's details:\n`Name, Date of Birth`\n\nExample:\n`Aarav, 15/06/2024`\n\nI'll send automatic reminders.",
+    "completion_message": "🎉 *Setup Complete, {name}!*\n\n*Enabled Services:*\n✅ {services_text}\n\n💬 *You can now ask anything:*\n• \"My child has fever\"\n• \"Where is nearest hospital\"\n• \"How's the weather\"\n\n🔊 *Health advice will now come as voice messages (no need to read!)*\n\nI'm here 24/7! 🙏"
+  },
+  "risk_aggregation": {
+    "title": "🗺️ *Health Risk Assessment*",
+    "overall_risk": "*Overall Risk Level*",
+    "risk_score": "Risk Score",
+    "components": "*📊 Risk Components:*",
+    "air_quality": "Air Quality",
+    "weather": "Weather",
+    "disease_prev": "Disease Prevalence",
+    "historical": "Historical Trend",
+    "alerts": "*⚠️ Alerts:*",
+    "recommendations": "*💡 Recommendations:*",
+    "alerts_text": {
+      "severe_air_pollution": "🚨 SEVERE Air Pollution Alert",
+      "high_disease_prevalence": "⚠️ High disease prevalence detected: {diseases}",
+      "overall_red": "🔴 OVERALL RISK LEVEL: RED - Essential outings only",
+      "overall_yellow": "🟡 OVERALL RISK LEVEL: YELLOW - Caution advised"
+    },
+    "recs_red": [
+      "🏠 Stay indoors if possible",
+      "😷 Wear N95 masks if outdoors",
+      "💧 Stay hydrated",
+      "⏰ Limit outdoor exposure to essential activities only",
+      "👨‍👩‍👧 Keep children and elderly indoors",
+      "📞 Keep emergency contacts ready"
+    ],
+    "recs_yellow": [
+      "⚠️ Exercise caution outdoors",
+      "😷 Wear masks in crowded areas",
+      "💨 Limit strenuous outdoor activities",
+      "🧴 Maintain hygiene protocols",
+      "👶 Extra care for vulnerable groups",
+      "🥗 Maintain healthy diet and hydration"
+    ],
+    "recs_green": [
+      "✅ Risk level is manageable",
+      "🚶 Normal outdoor activities are fine",
+      "💪 Maintain regular exercise",
+      "🧘 Continue normal health practices",
+      "📊 Monitor local alerts for changes"
+    ]
+  },
+  "risk_alert": {
+    "title": "📊 *Daily Health Briefing*",
+    "risk_level": "Risk Level",
+    "active_diseases": "⚕️ *Active Diseases:*",
+    "weather_alerts": "🌦️ *Weather Alerts:*",
+    "last_updated": "Last Updated",
+    "detailed": "Reply with /heatmap for detailed analysis",
+    "no_data": "📍 No health data available for your location yet."
+  }
+}

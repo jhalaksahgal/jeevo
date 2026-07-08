@@ -1,0 +1,108 @@
+Source: https://icd.who.int/browse10/2019/en
+Downloaded: 2026-02-12T02:49:14.047200
+================================================================================
+
+ICD-10 Version:2019
+Search Text :
+Advanced Search Help
+Advanced search lets you search selected properties of the classification. You 
+    could search all properties or a selected subset only
+First, you need to 
+    provide keywords in the
+Search Text
+field then check the 
+    properties that you'd like to include in the search.
+The system will search for the keywords in the properties that 
+    you've checked and rank the results similar to a search engine
+The results will be displayed in the Search Results pane.
+
+    If the search query hits more than 200 results, then only the top 200 will be 
+    displayed.
+If you provide more than one keyword, the system will 
+    search for items that have all the keywords.
+Wildcards:
+You may also use wildcard character * . see examples below.
+OR operator
+: It's possible to have the results that have
+    either one or another keyword. Please see the example 4.
+Examples:
+1. Search Text: diabetes   {finds all that have the word "diabetes" in 
+    the searched fields}
+2. Search Text: diabet*   {finds all that have a word that start with 
+    "diabet" }
+3. Search Text: diabet* mellitus   {finds all that have a word that 
+    starts with "diabet" and also contains the word "mellitus"}
+4. Search Text: tubercul* (lung OR larynx) { finds all that have a word that 
+    starts with "tubercul" and than has either lung OR larynx in it
+Search Results
+After the search the results are displayed at the lower right area of the screen. 
+    Here the porgram lists the titles of the ICD categories in which your search 
+    keywords are found.
+Clicking on any result will take you to that category
+You may close the advanced search window by clicking the X at the top left corner of the window.
+The search results pane can be resized by dragging the horizontal line above it
+Please check the properties that you'd like to include in the search
+[ 
+                Check All  
+                ]
+[ 
+                Uncheck All
+                ]
+Title
+Synonym
+Description
+Inclusion
+Exclusion
+ICD-10 Version:2019
+Search
+Quick Search Help
+Quick search helps you quickly navigate to a particular category. 
+    It searches only
+titles, inclusions and the index
+and it works by starting to search as you type and 
+    provide you options in a dynamic dropdown list.
+You may use this feature by simply typing the keywords that you're looking for 
+    and clicking on one of the items that appear in the dropdown list. The system 
+    will automatically load the item that you've picked.
+You may use wildcards '*' as well to find similar words or to simply save some 
+    typing.
+For example,
+tuber* confirmed
+will hit both 
+    tuberculosis and tuberculous together with the word 'confirmed'
+If you need to search other fields than the title, 
+    inclusion and the index then you may use the advanced 
+    search feature
+You may also use ICD codes here in order to navigate to a known ICD category.
+The colored squares show from where the results are found.
+(
+green:Title,
+blue:inclusions,
+orange:index,
+red:ICD code)
+You don't need to remeber the colors as you may hover your mouse on these 
+    squares to read the source.
+[
+                        Advanced Search
+                        ]
+ICD-10
+Versions - Languages
+ICD-10 Version:2016 - English
+ICD-10 Version:2015 - English
+ICD-10 Version:2014 - English
+ICD-10 Version:2010 - English
+ICD-10 Version:2008 - English
+ICD-10 Version:2008 - French
+Older versions
+Info
+User Guide
+ICD-10 Instruction Manual
+List of Changes
+ICD Home Page
+ICD-10 Online Training
+International Statistical Classification of Diseases and Related Health Problems 10th Revision
+You may browse the classification by using the hierarchy on the left or by using the search functionality
+More information on how to use the online browser is available in the Help
+×
+Search Results
+close

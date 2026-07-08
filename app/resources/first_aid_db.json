@@ -1,0 +1,57 @@
+{
+    "burn": {
+        "title": "Burn First Aid",
+        "steps": [
+            "1. Cool under running water for 10-20 minutes",
+            "2. Remove jewelry/tight items before swelling",
+            "3. Do NOT apply ice, butter, toothpaste, or oil",
+            "4. Cover loosely with clean, non-stick bandage",
+            "5. Take paracetamol for pain if needed"
+        ],
+        "seek_help_if": "Large area, face/hands/joints, deep burn, child/elderly"
+    },
+    "cut": {
+        "title": "Cut/Wound First Aid",
+        "steps": [
+            "1. Wash hands before treating",
+            "2. Apply firm pressure with clean cloth",
+            "3. Keep pressure for 10-15 minutes",
+            "4. Clean wound with clean water",
+            "5. Apply antiseptic and sterile bandage"
+        ],
+        "seek_help_if": "Deep cut, won't stop bleeding, dirty wound, face injury"
+    },
+    "choking": {
+        "title": "Choking First Aid",
+        "steps": [
+            "1. Ask 'Are you choking?' - if can't speak, act fast",
+            "2. Call for help/108",
+            "3. Give 5 firm back blows between shoulder blades",
+            "4. If not cleared, 5 abdominal thrusts (Heimlich)",
+            "5. Repeat back blows and thrusts until cleared"
+        ],
+        "seek_help_if": "Person becomes unconscious, breathing doesn't resume"
+    },
+    "snake_bite": {
+        "title": "Snake Bite First Aid",
+        "steps": [
+            "1. Keep calm, limit movement",
+            "2. Remove jewelry before swelling",
+            "3. Keep bitten area below heart level",
+            "4. Do NOT cut, suck, or apply tourniquet",
+            "5. Get to hospital IMMEDIATELY - antivenom needed"
+        ],
+        "seek_help_if": "ALL snake bites need immediate hospital care"
+    },
+    "fracture": {
+        "title": "Fracture First Aid",
+        "steps": [
+            "1. Do not move the injured area",
+            "2. Immobilize with splint/padding",
+            "3. Apply ice pack wrapped in cloth",
+            "4. Do NOT try to realign bone",
+            "5. Seek medical help immediately"
+        ],
+        "seek_help_if": "All suspected fractures need X-ray"
+    }
+}
