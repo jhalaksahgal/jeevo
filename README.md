@@ -1,144 +1,351 @@
-# 🌿 Jeevo: Multimodal Agentic Health Platform for Rural India
+# 🌿 Jeevo
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Modern-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Robust-336791?logo=postgresql)](https://www.postgresql.org/)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker)](https://www.docker.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+> An AI-powered multilingual healthcare assistant designed to provide accessible, reliable, and intelligent healthcare support through WhatsApp.
 
-**Jeevo** is an intelligent, voice-first health assistant deployed entirely over WhatsApp. It bridges the digital healthcare divide in rural India by providing localized medical guidance, automated health alerts, and clinical tracking in **10 regional languages**.
-
-Unlike simple prompt-wrappers, Jeevo operates on a sophisticated **Agentic LLM Orchestrator**. It intelligently classifies unstructured audio/text, autonomously invokes Python toolsets (like nearby hospital lookups or localized epidemic heatmaps), and grounds all medical responses using a **ChromaDB RAG Pipeline** queried against verified clinical guidelines (WHO/ICMR).
+Jeevo combines Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Speech Recognition, Computer Vision, Environmental Monitoring, and Healthcare Knowledge to deliver accurate medical assistance in multiple Indian languages. The platform is designed to bridge the healthcare accessibility gap by enabling users to interact naturally through text, voice, and images.
 
 ---
 
-## 🎯 The Problem & The Solution
+## 🚀 Features
 
-**The Problem:** 
-In rural India, millions lack immediate access to primary healthcare, reliable medical information, and preventive care alerts. Low literacy rates and complex app interfaces further alienate this demographic. 
-
-**The Solution:** 
-Jeevo meets users where they already are: **WhatsApp**. By heavily emphasizing **Voice-to-Text (Whisper STT)** and localized translation engines, users can simply send a voice note in Hindi or Marathi saying *"My child has a high fever and rash,"* and the AI will autonomously extract symptoms, perform a severity triage, query medical databases, and respond with contextual voice notes and emergency numbers.
-
----
-
-## 🧠 Core AI Architecture (For the Tech Reviewer)
-
-Jeevo demonstrates production-ready applied AI, separating prompt engineering from deterministic business logic.
-
-```mermaid
-graph TD
-    A[WhatsApp User] -->|Audio / Text| B(FastAPI Webhook)
-    B --> C{Multimodal Router}
-    
-    C -->|Audio| D[Whisper STT Engine]
-    D --> E
-    C -->|Text| E[Language Normalizer]
-    
-    E --> F[Agentic Orchestrator]
-    
-    F -->|Tool Invocation| G((Internal Tools))
-    G --> G1[Vaccine Tracker]
-    G --> G2[Epidemic Heatmap]
-    G --> G3[Google Maps Geocoder]
-    
-    F -->|Medical Query| H[Medical RAG System]
-    H --> H1[(ChromaDB Vector Store)]
-    H1 --> H2[ICMR / WHO Guidelines]
-    
-    F --> I[Response Generator]
-    I -->|Localized Context| J[Translation Engine]
-    J --> A
-```
-
-### 1. Agentic Intent Engine & Tool Calling
-Jeevo uses **Groq's high-speed Llama models** as the core reasoning engine. It evaluates user inputs and decides whether to invoke deterministic Python tools or answer directly.
-- **Entity Extraction:** Dynamically parses complex rural addresses, ages, and symptoms from messy conversational inputs.
-- **Tool Mapping:** Dynamically invokes tools like `check_symptoms`, `find_hospitals`, `check_vaccination_schedule`, or `get_first_aid`.
-
-### 2. Medical RAG (Retrieval-Augmented Generation)
-- **Vector Search Engine:** Employs **ChromaDB** with lightweight embeddings (`sentence-transformers/all-MiniLM-L6-v2`) to index verified medical datasets.
-- **Safety Validations:** When the LLM generates a response, it is verified against the RAG context. If confidence falls below `0.6` (`RAG_CONFIDENCE_THRESHOLD_MEDIUM`), the AI automatically triggers a fallback disclaimer advising clinical consultation.
-
-### 3. Asynchronous Voice-First Pipeline
-- **Parallel Processing:** Integrated Whisper STT seamlessly decodes regional dialects into actionable text asynchronously, preventing webhook timeouts.
-- **Adaptive Fallbacks:** If the AI determines the user has low literacy (based on input style), it generates Voice Note responses via **ElevenLabs TTS** instead of long text blocks.
-
-### 4. Zero-Slop Clean Architecture
-- **Dependency Injection:** Database connections utilize **SQLAlchemy 2.0 AsyncSessions** injected directly into repository instances.
-- **Transactional Safety:** 100% of data mutations are wrapped in `try/except/rollback` blocks.
-- **Externalized Datasets:** All static data (vaccine schedules, lab tests, anganwadi centers) are abstracted into `/app/resources/*.json` files. No hardcoded logic.
+- 🌍 Multilingual Support (10 Indian Languages)
+- 🎤 Speech-to-Text using OpenAI Whisper
+- 🖼️ Image OCR & Vision AI
+- 🧠 Medical Retrieval-Augmented Generation (RAG)
+- 💊 Medicine & Health Information
+- 👶 Child Vaccination Tracking
+- 🏥 Nearby Hospital Finder
+- 📍 Anganwadi Center Locator
+- 🌦️ Live Weather & AQI Monitoring
+- 🚨 Automated Health Risk Alerts
+- 👨‍👩‍👧 Family Health Management
+- 💬 WhatsApp Cloud API Integration
+- 🔒 AI Safety Validation & Medical Guardrails
+- 📈 Regional Epidemic Monitoring
 
 ---
 
-## 🚀 Quick Start (Local Setup)
+# 🏗️ System Architecture
 
-Jeevo is container-ready. You can deploy the entire stack locally using Docker.
-
-### Prerequisites
-- Docker & Docker Compose
-- Groq API Key
-- WhatsApp Cloud API Credentials
-- (Optional) Google Maps API Key, OpenWeather API Key
-
-### Step-by-step Setup
-
-1. **Clone the Repository**
-```bash
-git clone https://github.com/your-username/jeevo.git
-cd jeevo
 ```
-
-2. **Configure Environment Variables**
-Copy the example environment file and fill in your keys:
-```bash
-cp .env.example .env
+                     User
+                       │
+                       ▼
+              WhatsApp Cloud API
+                       │
+                       ▼
+                 FastAPI Backend
+                       │
+      ┌───────────────────────────────────┐
+      │      Intelligent Orchestrator     │
+      └───────────────────────────────────┘
+         │        │         │         │
+         ▼        ▼         ▼         ▼
+   Medical RAG  Whisper   Vision AI  Translation
+         │
+         ▼
+    ChromaDB + Medical Knowledge Base
+         │
+         ▼
+ Weather │ AQI │ Vaccine │ Hospital │ Anganwadi
 ```
-*Crucial Keys:* `GROQ_API_KEY`, `WHATSAPP_ACCESS_TOKEN`, `DATABASE_URL` (if running outside Docker).
-
-3. **Launch the Stack with Docker Compose**
-This spins up the FastAPI web server, the PostgreSQL database, and the Redis cache.
-```bash
-docker-compose up -d --build
-```
-
-4. **Verify Application**
-Visit `http://localhost:8000/docs` to access the interactive Swagger API documentation.
 
 ---
 
-## 📂 Project Structure
+# 🛠️ Tech Stack
+
+## Backend
+
+- FastAPI
+- Python
+- SQLAlchemy
+- PostgreSQL
+- Redis
+
+## AI & Machine Learning
+
+- OpenAI Whisper
+- ChromaDB
+- Sentence Transformers
+- Groq/OpenAI LLMs
+- Retrieval-Augmented Generation (RAG)
+
+## APIs
+
+- WhatsApp Cloud API
+- Google Maps API
+- OpenWeather API
+
+## Database
+
+- PostgreSQL
+- Redis
+- ChromaDB (Vector Database)
+
+---
+
+# 📌 Core Functionalities
+
+## 🩺 AI Medical Assistance
+
+- AI-powered symptom analysis
+- Medical information retrieval
+- Medication guidance
+- First-aid recommendations
+- Safe healthcare responses using RAG
+
+---
+
+## 🎤 Voice Assistant
+
+- Voice note support
+- Automatic speech transcription
+- Audio-based conversations
+- Multilingual speech interaction
+
+---
+
+## 🖼️ Vision AI
+
+- Prescription OCR
+- Medical image understanding
+- Vision-based healthcare assistance
+
+---
+
+## 👶 Child Healthcare
+
+- Vaccination schedule tracking
+- Vaccine reminders
+- Family profile management
+
+---
+
+## 📍 Smart Location Services
+
+- Nearby hospitals
+- Anganwadi center discovery
+- Location-aware healthcare recommendations
+
+---
+
+## 🌦 Environmental Intelligence
+
+- Weather monitoring
+- Air Quality Index (AQI)
+- Heatwave detection
+- Regional disease outbreak monitoring
+
+---
+
+## 🚨 Smart Risk Alerts
+
+- Pollution alerts
+- Heatwave notifications
+- Disease outbreak alerts
+- Personalized health risk assessment
+
+---
+
+# 📂 Project Structure
 
 ```
 jeevo/
+│
 ├── app/
-│   ├── ai/                # Whisper STT, LLM Orchestration logic
-│   ├── database/          # Async SQLAlchemy Repositories & Connections
-│   ├── locales/           # i18n JSON files for 10 regional languages
-│   ├── logic/             # Message routing and parsing logic
-│   ├── models/            # SQLAlchemy ORM schemas
-│   ├── resources/         # Static datasets (Vaccine DB, Lab Tests, etc.)
-│   ├── routes/            # Webhooks and API endpoints
-│   ├── services/          # Business logic (Hospitals, Heatmap, RAG)
-│   └── utils/             # Webhook validation, logging, cache setup
-├── medical_rag/           # Context documents for vector indexing
-├── server.py              # Application entry point
-├── docker-compose.yml     # Container orchestration
+│   ├── ai/
+│   ├── config/
+│   ├── database/
+│   ├── locales/
+│   ├── logic/
+│   ├── models/
+│   ├── resources/
+│   ├── routes/
+│   ├── services/
+│   └── utils/
+│
+├── medical_rag/
+│   ├── documents/
+│   ├── rag_engine.py
+│   └── vector_store.py
+│
+├── tests/
+│
+├── vector_db/
+│
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
 └── README.md
 ```
 
 ---
 
-## 📈 Future Roadmap
+# 🌐 Supported Languages
 
-1. **Integration with ABDM (Ayushman Bharat Digital Mission):** Allow users to pull basic health records securely.
-2. **Vision Capabilities:** Allow users to send pictures of medical prescriptions or basic skin rashes for OCR and localized translation.
-3. **Proactive Outbreak Paging:** Use Celery to batch-process daily alerts to user segments affected by sudden AQI drops or local Dengue outbreaks.
+Jeevo currently supports healthcare conversations in:
+
+- 🇮🇳 Hindi
+- 🇬🇧 English
+- 🇧🇩 Bengali
+- 🇮🇳 Gujarati
+- 🇮🇳 Kannada
+- 🇮🇳 Malayalam
+- 🇮🇳 Marathi
+- 🇮🇳 Punjabi
+- 🇮🇳 Tamil
+- 🇮🇳 Telugu
 
 ---
 
-## 🤝 Contribution & License
+# 🔒 AI Safety & Reliability
 
-Contributions are welcome! Please ensure that all database queries are routed through the instantiated repositories in `app/database/repositories.py` and wrapped in transactional rollback safety blocks.
+Healthcare systems require trustworthy responses. Jeevo incorporates multiple safeguards including:
 
-Distributed under the MIT License. See `LICENSE` for more information.
+- Retrieval-Augmented Generation (RAG)
+- Semantic Validation Engine
+- Medical Source Verification
+- Clinical Guardrails
+- AI-generated Medical Disclaimers
+- Emergency Escalation Logic
+- Human-safe Response Validation
+
+---
+
+# ⚙️ Installation
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/jeevo.git
+
+cd jeevo
+```
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+## Configure Environment Variables
+
+Create a `.env` file in the project root.
+
+```env
+DATABASE_URL=
+
+OPENAI_API_KEY=
+
+GROQ_API_KEY=
+
+WHATSAPP_TOKEN=
+
+GOOGLE_MAPS_API_KEY=
+
+OPENWEATHER_API_KEY=
+
+REDIS_URL=
+```
+
+## Run the Application
+
+```bash
+uvicorn app.main:app --reload
+```
+
+---
+
+# 🧪 Running Tests
+
+```bash
+pytest
+```
+
+---
+
+# 📖 Complete Workflow
+
+Jeevo provides an end-to-end healthcare workflow:
+
+- User onboarding
+- Language detection
+- Voice processing
+- AI medical consultation
+- Environmental monitoring
+- Vaccination management
+- Anganwadi discovery
+- Nearby hospital search
+- OCR-based prescription reading
+- Multilingual AI responses
+- Personalized health alerts
+
+---
+
+# 🌟 Highlights
+
+- AI-powered multilingual healthcare assistant
+- End-to-end WhatsApp automation
+- Retrieval-Augmented Generation (RAG)
+- Voice + Text + Image support
+- Medical knowledge grounded using ChromaDB
+- Automated environmental health monitoring
+- Real-time personalized healthcare recommendations
+- Modular and scalable FastAPI architecture
+
+---
+
+# 🚀 Future Improvements
+
+- Electronic Health Records (EHR)
+- Telemedicine Integration
+- Doctor Appointment Booking
+- Wearable Device Support
+- Offline AI Assistance
+- Predictive Disease Analytics
+- Mobile Application
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository.
+2. Create a new feature branch.
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push your branch.
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 🏆 Acknowledgement
+
+This project was developed as part of the **Health Hackathon**, conducted in collaboration with **Johns Hopkins University**. It showcases the application of Artificial Intelligence, Retrieval-Augmented Generation (RAG), multimodal AI, and healthcare technologies to build an intelligent, multilingual healthcare assistant aimed at improving healthcare accessibility for underserved communities.
+
+---
+
+# 👨‍💻 Author
+
+Developed with ❤️ to make healthcare more accessible through AI.
